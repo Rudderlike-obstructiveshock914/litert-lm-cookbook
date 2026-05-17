@@ -152,7 +152,7 @@ python 09_streaming_with_system_prompt.py
 
 ### 10_all_features.py
 
-The kitchen-sink demo: GPU, speculative decoding, tools, and streaming all at once. Three queries run in sequence — two exercise tools and one is free-form. A good reference for a production-like setup.
+The kitchen-sink demo: GPU, speculative decoding, tools, and streaming all at once. Three queries run in sequence two exercise tools and one is free-form. A good reference for a production-like setup.
 
 ```bash
 python 10_all_features.py
@@ -164,7 +164,7 @@ python 10_all_features.py
 
 This script connects to a local LiteRT-LM server over HTTP rather than loading a model file directly. Two server modes are supported; pick one before running.
 
-**Step 1 — import the model into the local store (one-time only):**
+**Step 1 import the model into the local store (one-time only):**
 
 ```bash
 litert-lm import \
@@ -174,19 +174,19 @@ litert-lm import \
 
 The model ends up at `~/.litert-lm/models/gemma-4-E4B-it.litertlm/model.litertlm`. This step only needs to run once.
 
-**Step 2a — start the OpenAI Responses API server:**
+**Step 2a start the OpenAI Responses API server:**
 
 ```bash
 litert-lm serve --api openai --host localhost --port 9379
 ```
 
-**Step 2b — or start the Gemini API server:**
+**Step 2b or start the Gemini API server:**
 
 ```bash
 litert-lm serve --api gemini --host localhost --port 9379
 ```
 
-**Step 3 — run the client in a separate terminal:**
+**Step 3 run the client in a separate terminal:**
 
 ```bash
 python 11_openai_api_server.py
@@ -212,3 +212,31 @@ The script contains four sections under the OpenAI API (`A1`–`A4`) and four un
 GPU examples (04, 05, 10) require a GPU that LiteRT-LM supports. On first run the engine compiles and caches GPU kernels, so startup takes longer than usual. Subsequent runs reuse the cache and start up faster.
 
 If you do not have a GPU, change `backend=litert_lm.Backend.GPU` to `backend=litert_lm.Backend.CPU` and remove `enable_speculative_decoding=True`. Everything else works the same on CPU.
+
+---
+
+## 📚 Citation
+
+If you use this cookbook in your research or work, please cite it as:
+
+```bibtex
+@misc{litert-llm-cookbook,
+  author       = {Onuralp Sezer},
+  title        = {LiteRT-LM Cookbook},
+  year         = {2025},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/onuralpszr/litert-llm-cookbook}},
+}
+```
+
+This project builds on the following resources. Please also cite them if they are relevant to your work:
+
+- **LiteRT-LM** [github.com/google-ai-edge/LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)
+- **Gemma** [ai.google.dev/gemma](https://ai.google.dev/gemma)
+- **litert-community on Hugging Face** [huggingface.co/litert-community](https://huggingface.co/litert-community)
+
+---
+
+## ⚠️ Disclaimer
+
+This is an independent community project and is not affiliated with, endorsed by, or sponsored by Google. LiteRT-LM and Gemma are trademarks of Google LLC.

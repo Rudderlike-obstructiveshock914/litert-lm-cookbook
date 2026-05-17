@@ -4,7 +4,7 @@
 [![LiteRT-LM](https://img.shields.io/badge/LiteRT--LM-nightly-4285F4?logo=google&logoColor=fff)](https://github.com/google-ai-edge/LiteRT-LM)
 [![Model](https://img.shields.io/badge/Model-Gemma--4%20E4B%20Instruct-orange?logo=google&logoColor=fff)](https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm)
 
-Google Colab notebooks that mirror the Python scripts in the `python/` folder. Each notebook is a single file you can open directly in Colab, run cell by cell, and modify without any local setup — no model download, no environment configuration, just click and run.
+Google Colab notebooks that mirror the Python scripts in the `python/` folder. Each notebook is a single file you can open directly in Colab, run cell by cell, and modify without any local setup no model download, no environment configuration, just click and run.
 
 ---
 
@@ -28,7 +28,7 @@ Google Colab notebooks that mirror the Python scripts in the `python/` folder. E
 
 ## 🆚 How Colab differs from running locally
 
-When you run on Colab the model file needs to come from somewhere — a local `.litertlm` file on your laptop is not accessible inside a Colab runtime. The notebooks handle this by downloading the model from Hugging Face at the start of each session. The download runs once per runtime and the file is stored at `/content/gemma-4-E4B-it.litertlm`. Every cell that references `MODEL_PATH` points to that path.
+When you run on Colab the model file needs to come from somewhere a local `.litertlm` file on your laptop is not accessible inside a Colab runtime. The notebooks handle this by downloading the model from Hugging Face at the start of each session. The download runs once per runtime and the file is stored at `/content/gemma-4-E4B-it.litertlm`. Every cell that references `MODEL_PATH` points to that path.
 
 If you connect to a Colab runtime with a GPU, examples 04, 05, and 10 will use it automatically. Free-tier runtimes usually offer a T4. If you have Colab Pro you can request an A100 or L4 for faster generation.
 
@@ -99,7 +99,7 @@ Sets a senior software engineer persona and streams the answer to a question abo
 
 ### 10 - All Features Combined
 
-The kitchen-sink demo: GPU, speculative decoding, tools, and streaming in one notebook. Three queries run in sequence — two call tools and one is free-form. Requires a GPU runtime.
+The kitchen-sink demo: GPU, speculative decoding, tools, and streaming in one notebook. Three queries run in sequence two call tools and one is free-form. Requires a GPU runtime.
 
 ### 11 - OpenAI and Gemini API Server
 
@@ -118,3 +118,31 @@ MODEL_PATH = "/content/drive/MyDrive/models/gemma-4-E4B-it.litertlm"
 ```
 
 That way the multi-gigabyte download only happens once and subsequent sessions load from Drive in a fraction of the time.
+
+---
+
+## 📚 Citation
+
+If you use this cookbook in your research or work, please cite it as:
+
+```bibtex
+@misc{litert-llm-cookbook,
+  author       = {Onuralp Sezer},
+  title        = {LiteRT-LM Cookbook},
+  year         = {2025},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/onuralpszr/litert-llm-cookbook}},
+}
+```
+
+This project builds on the following resources. Please also cite them if they are relevant to your work:
+
+- **LiteRT-LM** [github.com/google-ai-edge/LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)
+- **Gemma** [ai.google.dev/gemma](https://ai.google.dev/gemma)
+- **litert-community on Hugging Face** [huggingface.co/litert-community](https://huggingface.co/litert-community)
+
+---
+
+## ⚠️ Disclaimer
+
+This is an independent community project and is not affiliated with, endorsed by, or sponsored by Google. LiteRT-LM and Gemma are trademarks of Google LLC.

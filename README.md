@@ -8,7 +8,7 @@
 [![Model](https://img.shields.io/badge/Model-Gemma--4%20E4B%20Instruct-orange?logo=google&logoColor=fff)](https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/01_basic_chat.ipynb)
 
-A collection of runnable Python scripts and Google Colab notebooks that show how to use LiteRT-LM to run Gemma-4 completely on-device. Every example is self-contained and written to be read in order — from the simplest single-turn chat all the way up to a full local OpenAI-compatible API server.
+A collection of runnable Python scripts and Google Colab notebooks that show how to use LiteRT-LM to run Gemma-4 completely on-device. Every example is self-contained and written to be read in order from the simplest single-turn chat all the way up to a full local OpenAI-compatible API server.
 
 The model used throughout is **Gemma-4 E4B Instruct** (4 billion parameters, edge-optimised), a strong balance between capability and speed on consumer hardware.
 
@@ -61,7 +61,7 @@ The `requirements.txt` pulls in `litert-lm-api-nightly`, `litert-lm`, `openai`, 
 
 Scripts 01 through 10 expect the model file to sit **in the same directory where you run the script**. Script 11 uses the model registered in the LiteRT-LM local store instead.
 
-### Option A — Direct download
+### Option A Direct download
 
 Download the file from Hugging Face and place it next to the scripts:
 
@@ -79,7 +79,7 @@ https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm/resolve/main/ge
 
 The file is several gigabytes, so the download takes a few minutes on a typical connection.
 
-### Option B — LiteRT-LM CLI (required for example 11)
+### Option B LiteRT-LM CLI (required for example 11)
 
 The `litert-lm import` command downloads the model and registers it in the local model store (`~/.litert-lm/models/`). The API server in example 11 needs the model registered this way.
 
@@ -157,3 +157,31 @@ The script covers four usage patterns: the OpenAI Python SDK, raw SSE streaming,
 ## 🪪 License
 
 See [LICENSE](LICENSE).
+
+---
+
+## 📚 Citation
+
+If you use this cookbook in your research or work, please cite it as:
+
+```bibtex
+@misc{litert-llm-cookbook,
+  author       = {Onuralp Sezer},
+  title        = {LiteRT-LM Cookbook},
+  year         = {2025},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/onuralpszr/litert-llm-cookbook}},
+}
+```
+
+This project builds on the following resources. Please also cite them if they are relevant to your work:
+
+- **LiteRT-LM** [github.com/google-ai-edge/LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)
+- **Gemma** [ai.google.dev/gemma](https://ai.google.dev/gemma)
+- **litert-community on Hugging Face** [huggingface.co/litert-community](https://huggingface.co/litert-community)
+
+---
+
+## ⚠️ Disclaimer
+
+This is an independent community project and is not affiliated with, endorsed by, or sponsored by Google. LiteRT-LM and Gemma are trademarks of Google LLC.
