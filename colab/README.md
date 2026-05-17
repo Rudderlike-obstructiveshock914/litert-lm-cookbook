@@ -23,6 +23,13 @@ Google Colab notebooks that mirror the Python scripts in the `python/` folder. E
 | 09 | Streaming output combined with a system persona | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/09_streaming_with_system_prompt.ipynb) |
 | 10 | GPU, speculative decoding, tools, and streaming together | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/10_all_features.ipynb) |
 | 11 | Local OpenAI and Gemini API server | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/11_openai_api_server.ipynb) |
+| 12 | Controlling output with temperature, top_k, top_p, and seed | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/12_sampler_config.ipynb) |
+| 13 | Intercepting and filtering tool calls with ToolEventHandler | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/13_tool_event_handler.ipynb) |
+| 14 | Manual tool calling — inspect tool calls before executing | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/14_manual_tool_calling.ipynb) |
+| 15 | Low-level Session API with prefill, decode, and text scoring | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/15_session_api.ipynb) |
+| 16 | Built-in benchmarking: init time, TTFT, tokens per second | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/16_benchmark.ipynb) |
+| 17 | Tokenizer: encode, decode, and token budget management | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/17_tokenizer.ipynb) |
+
 
 ---
 
