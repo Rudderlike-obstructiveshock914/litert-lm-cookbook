@@ -29,8 +29,8 @@ MODEL_ID = "gemma-4-E2B-it.litertlm"
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # A. OpenAI Responses API  (litert-lm serve --api openai)
-#    Endpoint: POST /v1/responses
-#    Body fields: model (str), input (str), stream (bool)
+#   Endpoint: POST /v1/responses
+#   Body fields: model (str), input (str), stream (bool)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # base_url must end with /v1 so the SDK resolves /v1/responses correctly
@@ -130,8 +130,8 @@ def openai_raw_http_streaming() -> None:
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # B. Gemini API  (litert-lm serve --api gemini)
-#    Non-streaming: POST /v1beta/models/{model_id}:generateContent
-#    Streaming:     POST /v1beta/models/{model_id}:streamGenerateContent
+#   Non-streaming: POST /v1beta/models/{model_id}:generateContent
+#   Streaming:     POST /v1beta/models/{model_id}:streamGenerateContent
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 GEMINI_BASE = f"{HOST}/v1beta/models/{MODEL_ID}"
@@ -226,13 +226,12 @@ def gemini_streaming() -> None:
 
 
 if __name__ == "__main__":
-    # ── A. OpenAI Responses API (requires: litert-lm serve --api openai) ──
     openai_basic()
     openai_streaming()
     openai_raw_http_basic()
     openai_raw_http_streaming()
 
-    # ── B. Gemini API (requires: litert-lm serve --api gemini) ────────────
+    # emini API (requires: litert-lm serve --api gemini) 
     # gemini_basic()
     # gemini_with_system_instruction()
     # gemini_multi_turn()

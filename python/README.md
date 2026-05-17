@@ -207,6 +207,66 @@ The script contains four sections under the OpenAI API (`A1`–`A4`) and four un
 
 ---
 
+### 12_sampler_config.py
+
+Runs the same prompt four times with different `SamplerConfig` settings: fully deterministic (`temperature=0`, fixed seed), conservative (`top_k=10`), balanced nucleus sampling (`top_p=0.9`), and highly creative (`temperature=1.2`). Side-by-side output makes it easy to see how each setting changes the writing style.
+
+```bash
+python 12_sampler_config.py
+```
+
+---
+
+### 13_tool_event_handler.py
+
+Subclasses `ToolEventHandler` to intercept every tool call before it runs. The handler logs the call, blocks access to a restricted key, and redacts any sensitive content from tool responses before they reach the model.
+
+```bash
+python 13_tool_event_handler.py
+```
+
+---
+
+### 14_manual_tool_calling.py
+
+Sets `automatic_tool_calling=False` so the model returns tool call specifications instead of executing them. The script inspects each spec, dispatches the function manually, and feeds results back in a loop until the model produces a plain-text answer.
+
+```bash
+python 14_manual_tool_calling.py
+```
+
+---
+
+### 15_session_api.py
+
+Uses the low-level `Session` API (`create_session`, `run_prefill`, `run_decode`, `run_decode_async`) instead of the higher-level `Conversation`. Also demonstrates `run_text_scoring` to rank candidate answers by log-likelihood — useful for classification and evaluation tasks.
+
+```bash
+python 15_session_api.py
+```
+
+---
+
+### 16_benchmark.py
+
+Uses the built-in `Benchmark` class to measure init time, time to first token, and prefill/decode throughput across CPU, GPU, and GPU with speculative decoding — without writing any timing code yourself.
+
+```bash
+python 16_benchmark.py
+```
+
+---
+
+### 17_tokenizer.py
+
+Calls `engine.tokenize` and `engine.detokenize` to inspect how text maps to token IDs and back. Includes a token budget guard that truncates a prompt to a maximum token count before sending it.
+
+```bash
+python 17_tokenizer.py
+```
+
+---
+
 ## 💡 Notes on GPU examples
 
 GPU examples (04, 05, 10) require a GPU that LiteRT-LM supports. On first run the engine compiles and caches GPU kernels, so startup takes longer than usual. Subsequent runs reuse the cache and start up faster.
