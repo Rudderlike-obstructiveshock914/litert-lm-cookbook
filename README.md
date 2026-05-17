@@ -104,22 +104,19 @@ python 01_basic_chat.py
 
 ## Examples at a glance
 
-| File | What it shows |
-|------|---------------|
-| `01_basic_chat.py` | Single synchronous request and response |
-| `02_streaming_chat_loop.py` | Interactive terminal chat with streaming output |
-| `03_system_prompt.py` | Setting a persona through a system message |
-| `04_gpu_backend.py` | Running inference on GPU instead of CPU |
-| `05_speculative_decoding.py` | GPU with multi-token prediction for faster output |
-| `06_tool_use.py` | Registering Python functions as callable tools |
-| `07_multimodal_audio.py` | Sending an audio file alongside a text prompt |
-| `08_multimodal_vision.py` | Sending an image alongside a text prompt |
-| `09_streaming_with_system_prompt.py` | Streaming output combined with a system persona |
-| `10_all_features.py` | GPU, speculative decoding, tools, and streaming together |
-| `11_openai_api_server.py` | Using the local OpenAI and Gemini API server |
-
-See the `python/` folder for the scripts and their individual documentation.
-See the `colab/` folder for the Colab notebook versions of the same examples.
+| # | What it shows | Python | Colab |
+|---|---------------|--------|-------|
+| 01 | Single synchronous request and response | [01_basic_chat.py](python/01_basic_chat.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/01_basic_chat.ipynb) |
+| 02 | Interactive terminal chat with streaming output | [02_streaming_chat_loop.py](python/02_streaming_chat_loop.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/02_streaming_chat_loop.ipynb) |
+| 03 | Setting a persona through a system message | [03_system_prompt.py](python/03_system_prompt.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/03_system_prompt.ipynb) |
+| 04 | Running inference on GPU instead of CPU | [04_gpu_backend.py](python/04_gpu_backend.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/04_gpu_backend.ipynb) |
+| 05 | GPU with multi-token prediction for faster output | [05_speculative_decoding.py](python/05_speculative_decoding.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/05_speculative_decoding.ipynb) |
+| 06 | Registering Python functions as callable tools | [06_tool_use.py](python/06_tool_use.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/06_tool_use.ipynb) |
+| 07 | Sending an audio file alongside a text prompt | [07_multimodal_audio.py](python/07_multimodal_audio.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/07_multimodal_audio.ipynb) |
+| 08 | Sending an image alongside a text prompt | [08_multimodal_vision.py](python/08_multimodal_vision.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/08_multimodal_vision.ipynb) |
+| 09 | Streaming output combined with a system persona | [09_streaming_with_system_prompt.py](python/09_streaming_with_system_prompt.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/09_streaming_with_system_prompt.ipynb) |
+| 10 | GPU, speculative decoding, tools, and streaming together | [10_all_features.py](python/10_all_features.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/10_all_features.ipynb) |
+| 11 | Local OpenAI and Gemini API server | [11_openai_api_server.py](python/11_openai_api_server.py) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onuralpszr/litert-llm-cookbook/blob/main/colab/11_openai_api_server.ipynb) |
 
 ---
 
